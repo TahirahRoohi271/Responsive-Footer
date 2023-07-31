@@ -1,0 +1,143 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+
+}
+body{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+footer{
+     position: relative;
+     width: 100%;
+     min-height: 350px;
+     padding: 3rem 1rem;
+}
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.col{
+    min-width: 250px;
+    font-family: poppins;
+    padding:0 2rem;
+}
+.col .logo{
+    width: 300px;
+    margin-bottom:25px;
+    padding-right: 5rem;
+}
+.col h3{
+    margin-bottom: 20px;
+    position: relative;
+    cursor: pointer;
+}
+.col h3::after{
+    content: '';
+    height:3px;
+    width:0px;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    transition: 0.3s ease;
+
+}
+.col h3:hover::after{
+    width:30px
+}
+.col .social a i{
+    margin-top:2rem;
+    margin-right: 5px;
+    transition: 0.3s ease;
+}
+.col .social a i:hover{
+    transform: scale(1.5);
+    filter:grayscale(25);
+}
+.col .links a{
+    display: block;
+    text-decoration: none;
+    color: #000;
+    margin-bottom: 5px;
+    position: relative;
+    transition: 0.3s ease;
+}
+.col .links a::before{
+    content:'';
+    height: 16px;
+    width:3px;
+    position: absolute;
+    top:5px;
+    left:-10px;
+    background-color: rgb(92, 84, 86);
+    transition: 0.5s ease;
+    opacity: 0;
+}
+#contact{
+    margin-top: 2.5rem;
+}
+.col .links a:hover::before{
+    opacity: 1;
+}
+.col .links a:hover{
+    transform: translateX(-8px);
+    color:rgb(92, 84, 86);
+}
+.col .contact-details{
+    display: inline-flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+.col .contact-details i{
+    margin-right:15px;
+}
+
+
+/********** Responsive Design ********/
+@media(max-width:900px)
+{
+    .col .logo{
+        width: 250px;
+    }
+  .row{
+    flex-direction: column;
+  }
+  .col{
+    width: 50%;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+}
+@media(max-width:768px)
+{
+    .col .logo{
+        width: 200px;
+    }
+  .row{
+    flex-direction: column;
+  }
+  .col{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+@media(max-width:438px){
+
+}
